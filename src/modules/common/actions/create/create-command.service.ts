@@ -45,13 +45,13 @@ export class CreateCommandService {
       replaces.push(parts);
     }
 
-    const distExists = await this.fsService.exists(dist);
+    // const distExists = await this.fsService.exists(dist);
 
-    if (distExists) {
-      throw new ClirioCommonError(
-        `The "dist" path already exist: ${dist}. Add --clear to remove it`,
-      );
-    }
+    // if (distExists) {
+    //   throw new ClirioCommonError(
+    //     `The "dist" path already exist: ${dist}. Add --clear to remove it`,
+    //   );
+    // }
 
     const sourceFiles = await util
       .promisify(exec)(`find ${source}/ -type f`)

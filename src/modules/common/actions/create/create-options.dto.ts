@@ -10,6 +10,6 @@ export class CreateOptionsDto {
 
   @Option('--clear, -c')
   @Transform(Clirio.form.FLAG)
-  @JoiSchema(Joi.string().required())
+  @JoiSchema(Joi.boolean().required())
   readonly clear: boolean;
 }
